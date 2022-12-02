@@ -1,18 +1,12 @@
-import React from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { newsItemSelector } from "../../features/news/newsSlice";
+import { SingleNewsItem } from "../../features/singleNews/SingleNews";
+import { useAppSelector } from "../../app/hooks";
 
 export const SingleNewsPage = () => {
   const { id: singleNewsId } = useParams();
-  
-  const newsItemDataState = useSelector(newsItemSelector(singleNewsId));
-  
-  return (
-  <div>
-    {newsItemDataState ? 
-      `NEWS ${newsItemDataState.name}`
-       : "Loading..."}
-  </div>
-  );
+
+  const newsItemDataState = useAppSelector(newsItemSelector(singleNewsId));
+
+  return <div>{newsItemDataState ? <SingleNewsItem /> : "Loading..."}</div>;
 };

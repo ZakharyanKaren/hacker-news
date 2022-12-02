@@ -26,7 +26,7 @@ export const getNewsAsync = createAsyncThunk(
     const response = await fetchNews();
     // The value we return becomes the `fulfilled` action payload
     const data = response.articles;
-    const processData = data.map((item: Article, i: number) => ({ index: i + 1, id: `${i+1}`, ...item, name: item.source.name }))
+    const processData = data.map((item: Article, i: number) => ({ key: i, index: i + 1, id: `${i+1}`, ...item, name: item.source.name }))
     return processData;
   }
 );

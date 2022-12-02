@@ -1,0 +1,29 @@
+.single-news-wrapper {
+  width: 70%;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.single-news-content-wrapper {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+  border: 2px solid rgb(0, 81, 255);
+  padding: 20px;
+
+  img {
+    width: 500px;
+    height: 250px;
+    display: block;
+  }
+
+  > div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

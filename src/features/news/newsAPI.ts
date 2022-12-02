@@ -1,5 +1,6 @@
-const getNewsApi = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=2913888cef8846b6ac15e7747f30d28f";
+// const getNewsApi = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=bf3250e5fe4444cdaea8e021c2317fa4";
 
 export async function fetchNews() {
-  return fetch(getNewsApi).then(res => res.json());
+  return fetch(getNewsApi).then(res => {console.log(res); return res.json()});
 }
+ 
