@@ -51,8 +51,6 @@ export const News = () => {
     },
   ];
 
-  // newsDataState.status
-
   return (
     <div>
       <Table
